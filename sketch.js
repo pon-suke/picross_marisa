@@ -193,7 +193,7 @@ function isEqualArray(a, b) {
 
 function load_localStorage() {
     if (window.localStorage) {
-        let data = localStorage.getItem('blocks');
+        let data = localStorage.getItem('blocks_marisa');
         data = JSON.parse(data);
         if (data != null) {
             for (let i = 0; i < blocks.length; i++) {
@@ -209,13 +209,13 @@ function load_localStorage() {
 function save_localStorage() {
     if (window.localStorage) {
         let json = JSON.stringify(blocks);
-        localStorage.setItem('blocks', json);
+        localStorage.setItem('blocks_marisa', json);
     }
 }
 
 function remove_localStorage(){
     if (window.localStorage) {
-        localStorage.removeItem('blocks');
+        localStorage.removeItem('blocks_marisa');
         for (let i = 0; i < answer.length; i++) {
             blocks[i] = [];
             for (let j = 0; j < answer[i].length; j++) {
